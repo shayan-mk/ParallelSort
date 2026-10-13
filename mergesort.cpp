@@ -38,6 +38,10 @@ int main(int argc, char* argv[]) {
         sequential_mergesort::mergesort(result);
       else if(((std::string)argv[2]) == "par")
         parallel_mergesort::mergesort(result);
+      else if(((std::string)argv[2]) == "pmerge")
+        parallel_mergesort::parallel_merge_sort(result);
+      else if(((std::string)argv[2]) == "cache")
+        parallel_mergesort::cache_efficient_sort(result);
       else if(((std::string)argv[2]) == "stdsort") {
         std::sort(result.begin(), result.end());
       }
